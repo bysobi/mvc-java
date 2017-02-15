@@ -1,0 +1,115 @@
+login.title=Вход
+login.login=Логин
+login.pass=Пароль
+login.enter=Ввойти
+login.registration=Регистрация
+
+registration.title=Регистрация пользователя
+registration.h3=Создание нового пользователя
+registration.user_lastname=Фамилия
+registration.user_firstname=Имя
+registration.user_secondname=Отчество
+registration.user_login=Логин
+registration.user_pass=Пароль
+registration.user_confpass = Подтвердите пароль 
+registration.user_confirm = Зарегистрироваться
+
+test_list_title=Тесты
+
+list_users.title=Пользователи
+list_users.h3=Пользователи системы
+list_users.user_lastName=Фамилия
+list_users.user_secondName=Отчество
+list_users.user_firstName=Имя
+list_users.user_login=Логин
+list_users.user_role=Роль
+list_users.user_activity=Активен
+list_users.edit=Редактировать 
+
+list_users.empty=Пользователи не найдены
+
+list_tests.title= Тесты
+list_tests.h3= Доступные тесты
+list_tests.name = Название теста
+list_tests.subjectName = Предмет
+list_tests.timeToPass = Время на прохождение
+list_tests.edit=Редактировать 
+list_tests.pass = Пройти
+list_tests.create_test =Добавить тест
+list_tests.empty=Тесты отсутствуют
+list_tests.complexity= Сложность
+list_tests.result = Результат
+list_tests.addingQuestion = Добавить вопросы в тест
+list_tests.bestResults = Лучшие результаты
+
+list_tests.id = ID
+
+new_test.title=Создание теста
+new_test.h3=Новый тест
+new_test.testName = Название теста
+new_test.subjectName= Название предмета
+new_test.timeToPass = Время прохождения
+new_test.create=Создать тест
+
+edit_test.title=Редактирование теста
+edit_test.h3=Редактирование теста
+edit_test.delTest=Удалить тест
+edit_test.name= Название теста
+edit_test.subjectName= Название предмета
+edit_test.timeToPass= Время прохождения
+edit_test.complexity = Сложность
+edit_test.saveChanges=Сохранить измениения
+edit_test.removeTest = Удалить тест 
+ 
+ 
+edit_user.title=Редактирование пользователя
+edit_user.h3=Редактирование пользователя
+edit_user.user_lastName=Фамилия
+edit_user.user_secondName=Отчество
+edit_user.user_firstName=Имя
+edit_user.user_login=Логин
+edit_user.user_password=Пароль
+edit_user.user_role=Роль
+edit_user.user_activity=Активность
+edit_user.user_active=Активен
+edit_user.save_changes=Cохранить измениения
+edit_user.del_user=Удалить пользователя
+
+add_to_test.title = Добавить вопрос в тест
+add_to_test.h3 = Добавить вопрос в тест
+add_to_test.tesxtOfQuestion = Текст вопроса
+add_to_test.textOfAnswer = Текст ответа
+add_to_test.answerFlag = t/f
+add_to_test.addQuestionAndAnswers = Добавить
+add_to_test.selectTest = Выберите тест 
+ 
+footer.test=Тестирование
+
+add_to_test.chooseTheTest = Выберите тест
+
+header.lang=Язык интерфейса
+header.entered_like=Вы вошли как
+header.unauthorized=Вы не авторизованы
+header.logout=Выйти
+header.login=Вход
+header.registration = Регистрация
+
+error.back=Вернуться на главную страницу
+menu.cabinet = Кабинет
+menu.logo=Тестирование
+menu.main=Главная
+menu.list_tests=Тесты
+menu.list_users=Пользователи
+menu.users_privateOffice = Кабинет
+menu.list_results = Cписок
+
+test_submit = Завершить
+test_start.h3 = Тест начат
+test_result = Результат
+
+welcome.title=Тестирование
+welcome.h1=Добро пожаловать!!
+welcome.p_text=Проект Тестирование предназначен для онлайн-тестирования специалистов по разным предметам.
+welcome.p_must_login=Для продолжения работы Вы должны войти в систему.
+welcome.h1.aut_user = Поздравляем
+welcome.p_text.aut_user = Авторизация прошла успешно.

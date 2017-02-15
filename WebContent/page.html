@@ -1,0 +1,136 @@
+<html>
+<head>
+	<title>AutoStation</title>
+	<style type="text/css">
+		body {
+			background-color: #687890;
+			margin: 0;
+			font-family: Arial;
+			font-size: 12pt;
+		}
+		h1 {
+			text-align: center;
+		}
+		p {
+			text-indent: 14pt;
+		}
+		#header {
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 25px;
+			background-color: #ac7ca1;
+		}
+		#header table {
+			width:90%;
+			margin: auto;
+			font-size: 11pt;
+			font-weight:bold;
+			color:#ffffff;
+		}
+		#header td {
+			width:33.33%;
+			text-align: left;
+		}
+		#header td + td {
+			width:33.33%;
+			text-align: center;
+		}
+		#header td + td + td {
+			width:33.33%;
+			text-align: right;
+		}
+		
+		#footer {
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 25px;
+			background-color: #ac7ca1;
+			color:#ffffff;
+			font-weight: bold;
+			text-align: center;
+		}
+		#wraper {
+			width:1000px;
+			margin: 40px auto 40px auto;	
+			background-color: rgba(255,255,255,0.8);
+			border-radius:8px;
+			min-height:700px;
+		}
+		#wraper #menu {
+			border-bottom:solid #687890 10px;
+		}
+		#wraper #menu div {
+			width:60%;
+			float: left;
+		}
+		#wraper #menu div + div {
+			width:40%;
+			float: left;
+		}
+		#menu h1 {
+			margin-top:30px;
+			font-size: 20pt;
+			text-align: center;
+		}
+		#menu ul {
+			margin-left: 50px;
+		}
+		#menu ul li {
+			font-size:14pt;
+		}
+		#wraper #menu img {
+			width:250px;
+			height:183px;
+			border:none;
+			margin-top:20px;
+		} 
+		#content{
+			width:90%;
+			margin:0 auto;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="header">
+		<table>
+			<tr>
+				<td>Язык интерфейса : EN | RU</td>
+				<td>Вы не авторизованы</td>
+				<td>Вход</td>
+			</tr>
+		</table>
+	</div>
+	<div id="wraper">
+		<div id="menu">
+			<div>
+				<h1>Автостанция</h1>
+				<ul>
+					<li>Главная</li>
+					<li>Рейсы</li>
+					<li>Автобусы</li>
+					<li>Заявки</li>
+				</ul>
+			</div>
+			<div>
+				<a><img alt="" src="img/logo_bus.png" /></a>
+			</div>
+			<div style="float:none;clear:both;"></div>
+		</div>
+		<div id="content">
+			<h1>Добро пожаловать!!</h1>
+			<p>Это приложение предназначено для автоматизации работы автостанции. Диспетчеры создают рейсы,
+			водители оставляют заявки на рейс. Затем диспетчер выбирает подходящий автобус из автопарка и назначает 
+			его и водителя на рейс.</p>
+			<p>Для продолжения работы Вы должны войти в систему.</p>
+		</div>
+	</div>
+	<div id="footer">
+		Автостанция
+	</div>
+</body>
+</html>

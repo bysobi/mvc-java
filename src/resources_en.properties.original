@@ -1,0 +1,214 @@
+edit_bus.title=Edit bus
+edit_bus.h3=Edit bus
+edit_bus.del_bus=Delete bus
+edit_bus.bus_label=Bus label
+edit_bus.bus_number=Plates
+edit_bus.bus_year=Year
+edit_bus.bus_seats=Seats count
+edit_bus.bus_speed=Speed
+edit_bus.bus_color=Color
+edit_bus.bus_condition=Condition
+edit_bus.bus_isok=OK
+edit_bus.bus_ok=Ok
+edit_bus.save_changes=save changes
+
+edit_user.title=Edit user
+edit_user.h3=Edit user
+edit_user.user_lname=Last name
+edit_user.user_mname=Middle name
+edit_user.user_fname=First name
+edit_user.user_login=Login
+edit_user.user_pass=Password
+edit_user.user_role=Role
+edit_user.user_activity=Activity
+edit_user.user_active=Active
+edit_user.save_changes=save changes
+edit_user.del_user=Delete user
+
+list_buses.title=Buses
+list_buses.h3=Buses from carport
+list_buses.bus_label=Label
+list_buses.bus_number=Plates
+list_buses.bus_year=Year
+list_buses.bus_seat=Seats count
+list_buses.bus_speed=Speed
+list_buses.bus_color=Color
+list_buses.bus_cond=Contition
+list_buses.bus_isok=OK
+list_buses.edit=edit
+list_buses.add_bus=Add bus
+list_buses.empty=Carport is empty
+
+list_users.title=Users
+list_users.h3=System's users 
+list_users.user_lname=Last name
+list_users.user_mname=Middle name
+list_users.user_fname=First name
+list_users.user_login=Login
+list_users.user_role=Role
+list_users.user_activity=Active
+list_users.edit=edit
+list_users.empty=Users not found
+list_users.reg_new=Register new user
+
+new_bus.title=Bus creating
+new_bus.h3=New bus
+new_bus.bus_label=Bus brand(label)
+new_bus.bus_number=Plates
+new_bus.bus_year=Year
+new_bus.bus_seats=Seats count
+new_bus.bus_speed=Speed
+new_bus.bus_color=Color
+new_bus.bus_cond=Condition
+new_bus.create=create
+
+new_user.title=User registration
+new_user.h3=Creating new user
+new_user.user_lname=Last name
+new_user.user_mname=Middle name
+new_user.user_fname=First name
+new_user.user_login=Login
+new_user.user_pass=Password
+new_user.user_role=Role
+new_user.save=save changes
+
+line.title=Line
+line.h2=Line
+line.p_requests=Requests for line
+line.req_driver=Driver
+line.req_seats=Seats count
+line.req_speed=Speed
+line.req_cond=Condition
+line.del=delete
+line.empty=Requests not found
+line.create_req=Create new request
+line.edit_line=Edit line
+line.delete=Delete line
+
+list_lines.title=Lines
+list_lines.h2=Buses lines 
+list_lines.empty=lines not found
+list_lines.sort_number=Sort by number
+list_lines.sort_route=Sort by route
+list_lines.sort_date=Sort by date
+list_lines.sort_status=Sort by status
+list_lines.line_number=Number
+list_lines.line_route=Route
+list_lines.line_date_create=Created date
+list_lines.line_date_dep=Departure date
+list_lines.line_status=Status
+list_lines.line_req=Requests
+list_lines.line_driver=Driver
+list_lines.line_bus=Bus
+list_lines.show_line=show requests
+list_lines.create_line=Create new line
+
+edit_line.title=Edit line
+edit_line.h3=Edit line
+edit_line.line_number=Line number
+edit_line.line_route=Line route
+edit_line.line_date=Departure date
+edit_line.line_time=Departure time
+edit_line.line_status=Status
+edit_line.save=save changes
+edit_line.del_line=Delete line
+
+list_requests.title=Requests
+list_requests.h3=New requests for lines
+list_requests.req_driver=Driver
+list_requests.req_number=Line number
+list_requests.req_route=Line route
+list_requests.req_date_dep=Departure date
+list_requests.req_seats=Seats count
+list_requests.req_speed=Bus speed
+list_requests.req_cond=Bus condition
+list_requests.resolve=set bus
+list_requests.del=delete
+list_requests.empty=requests not found
+
+new_line.title=New line
+new_line.h3=New line
+new_line.line_number=Number
+new_line.line_route=Route
+new_line.line_date=Departure date
+new_line.line_time=Departure time
+new_line.create=create
+
+resolve_request.title=Resolve request
+resolve_request.h3=Resolve request
+resolve_request.req_driver=Driver
+resolve_request.req_line=Line
+resolve_request.req_line_dep=departuring
+resolve_request.desired_bus=Desired bus options
+resolve_request.desired_speed=speed
+resolve_request.desired_seats=seats count
+resolve_request.desired_cond=condition
+resolve_request.p_free_ok_buses=Free and OK buses from carport
+resolve_request.bus_year=year
+resolve_request.bus_seats=seats
+resolve_request.bus_speed=speed
+resolve_request.bus_cond=condition
+resolve_request.choose=select
+resolve_request.bus_empty=There are no free buses at this time
+
+appointed_lines.title=Appointed lines
+appointed_lines.h3=Appointed lines to user
+appointed_lines.line_number=Number
+appointed_lines.line_route=Route
+appointed_lines.line_date_create=Created date
+appointed_lines.line_date_dep=Departure date
+appointed_lines.line_status=Status
+appointed_lines.line_driver=Driver
+appointed_lines.line_bus=Bus
+appointed_lines.end_line=end line
+appointed_lines.empty=appointed lines no found
+
+new_request.titlte=New request
+new_request.h3=Creating new request for 
+new_request.req_seats=Seats count not less than
+new_request.req_speed=Speed not less than
+new_request.req_cond=Condition not worth than
+new_request.create=create
+
+resolve_line.title=Ending line
+resolve_line.h3=Appointed line
+resolve_line.line_number=Number
+resolve_line.line_route=Route
+resolve_line.line_driver=Driver
+resolve_line.line_bus=Bus
+resolve_line.p_resolve=End line
+resolve_line.bus_cond=Bus condition
+resolve_line.bus_ok=Bus is Ok ?
+resolve_line.bus_ok_isok=Ok
+resolve_line.resolve=end line
+
+footer.test=Testing
+
+header.lang=Interface Language
+header.entered_like=You've logged in as
+header.entered_role=role
+header.unauthorized=You aren't authorised
+header.logout=Log Out
+header.login=Log In
+
+menu.logo=Bus Station
+menu.main=Main
+menu.list_lines=All lines
+menu.list_buses=Buses
+menu.list_users=Users
+menu.requests=New requests
+menu.appointed_lines=Appointed lines
+
+error.back=Return to main page
+
+login.title=Log In
+login.login=Login
+login.pass=Password
+login.enter=log in
+login.registration=Êegistration
+
+welcome.title=Bus Station
+welcome.h1=WELCOME!!
+welcome.p_text=This application is dedicated to automate work of bus station. Dispatchers create lines and drivers leave request. Than dispatcher choses appropriate bus from carport and appoints it to line.
+welcome.p_must_login=You have to log in to use the functionality.
+
