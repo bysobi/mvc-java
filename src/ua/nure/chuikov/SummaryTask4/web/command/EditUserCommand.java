@@ -36,11 +36,8 @@ public class EditUserCommand extends AbstractCommand {
 	} catch (SQLException e) {
 	    e.printStackTrace();
 	}
-	request.setAttribute("lastName", user.getLastName());
-	request.setAttribute("secondName", user.getSecondName());
-	request.setAttribute("firstName", user.getFirstName());
-	request.setAttribute("userLogin", user.getUserLogin());
-	request.setAttribute("userPassword", user.getUserPassword());
+	request.setAttribute("lastName", user.getSecondNameUkr());
+
 	request.setAttribute("id", user.getId());
 	request.setAttribute("role", user.getRole());
 	request.setAttribute("isActive", user.isActive());

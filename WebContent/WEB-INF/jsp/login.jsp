@@ -21,7 +21,7 @@
 						<table>
 							<tr>
 								<td><fmt:message key="login.login"/></td>
-								<td><input type="text" name="login" /></td>
+								<td><input type="text" name="email" /></td>
 							</tr>
 							<tr>
 								<td><fmt:message key="login.pass"/></td>

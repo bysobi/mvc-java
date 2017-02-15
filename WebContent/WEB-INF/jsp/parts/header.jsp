@@ -8,7 +8,7 @@
 		<tr>
 			<td><fmt:message key="header.lang"/> : <a href="controller?command=setLocale&locale=en">EN</a> | <a href="controller?command=setLocale&locale=ru">RU</a></td>
 			<td><c:if test="${not empty aut_user}">
-					<fmt:message key="header.entered_like" /> ${aut_user.userLogin}
+					<fmt:message key="header.entered_like" /> ${aut_user.email}
 				</c:if> <c:if test="${empty aut_user}">
 					<fmt:message key="header.unauthorized" />
 				</c:if> <a> </a></td>

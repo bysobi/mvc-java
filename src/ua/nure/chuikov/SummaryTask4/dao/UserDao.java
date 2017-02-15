@@ -14,7 +14,7 @@ import ua.nure.chuikov.SummaryTask4.entity.User;
  *
  */
 public interface UserDao {
-    public User getUserByLogin(String userLogin) throws SQLException, UnsupportedEncodingException;// Executed
+    public User getUserByLogin(String email) throws SQLException, UnsupportedEncodingException;// Executed
 
     public Collection<User> getAllUsers() throws SQLException;// Executed
 

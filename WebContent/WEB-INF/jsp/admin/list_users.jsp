@@ -29,33 +29,16 @@
 					<thead>
 						<tr>
 							<th><div class="c1">
-									<fmt:message key="list_users.user_lastName" />
+									<fmt:message key="list_users.email" />
 								</div></th>
-							<th><div class="c2">
-									<fmt:message key="list_users.user_firstName" />
-								</div></th>
-							<th><div class="c3">
-									<fmt:message key="list_users.user_secondName" />
-								</div></th>
-							<th><div class="c4">
-									<fmt:message key="list_users.user_login" />
-								</div></th>
-						<%-- 	<th><div class="c5">
-									<fmt:message key="list_users.user_activity" />
-								</div></th> --%>
-
+						
 						</tr>
 					</thead>
 					<tbody>
 						<c:forEach items="${users}" var="user">
 							<tr title="<fmt:message key="list_users.edit"/>"
 								onclick="window.location.href='controller?command=editUser&id=${user.id}'">
-								<td><div class="c1">${user.firstName}</div></td>
-								<td><div class="c2">${user.secondName}</div></td>
-								<td><div class="c3">${user.lastName}</div></td>
-								<td><div class="c4">${user.userLogin}</div></td>
-					<%-- 			<td><div class="c5">${user.isActive}</div></td>
- --%>
+								<td><div class="c1">${user.email}</div></td>
 							</tr>
 						</c:forEach>
 					</tbody>

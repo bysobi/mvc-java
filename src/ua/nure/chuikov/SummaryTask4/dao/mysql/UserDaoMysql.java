@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -24,14 +25,13 @@ public class UserDaoMysql implements UserDao {
     // SQL queries
     // //////////////////////////////////////////////////////////
     private static final String SQL_SELECT_ALL = "SELECT * FROM `user` ";
-    private static final String SQL_SELECT_BY_LOGIN = "SELECT * FROM user WHERE userLogin = ?";
+    private static final String SQL_SELECT_BY_LOGIN = "SELECT * FROM user WHERE email = ?";
     private static final String SQL_UPDATE_USER_BY_ID = "UPDATE user  SET firstName = ?,secondName = ?,lastName = ?,"
-	    + "userLogin =?,userPassword = ? ,role = ?,locale=?,isActive = ? WHERE id = ?";
+	    + "userPassword = ? ,role = ?,locale=?,isActive = ? WHERE id = ?";
     private static final String SQL_SELECT_USER_BY_ID = "SELECT * FROM `user` WHERE id = ?";
     private static final String SQL_SELECT_USER_BY_ROLE = "SELECT * FROM `user` WHERE role = ?";
     private static final String SQL_DELETE_USER_BY_ID = "DELETE FROM `user` WHERE id = ?";
-    private static final String SQL_REGISTRATION_OF_USER = "INSERT INTO `user`( `firstName`, `secondName`, `lastName`, `userLogin`,"
-	    + "`userPassword`, `role`, `locale`, `isActive`) VALUES (?,?,?,?,?,?,?,?)";
+    private static final String SQL_REGISTRATION_OF_USER = "INSERT INTO `user`(`f_name_ukr`,`s_name_ukr`,`m_name_ukr`,`f_name_eng`,`s_name_eng`,`m_name_eng`,`email`, `phone`, `sec_email`, `department`, `password`, `created_at`, `updated_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
     private DBManager dbManager;
 
@@ -39,28 +39,33 @@ public class UserDaoMysql implements UserDao {
 	this.dbManager = dbManager;
     }
 
+    
+    
     private User extractUser(ResultSet rs) throws SQLException {
 	User user = new User();
 	user.setId(rs.getInt("id"));
-	user.setFirstName(rs.getString("firstName"));
-	user.setSecondName(rs.getString("secondName"));
-	user.setLastName(rs.getString("lastName"));
-	user.setUserLogin(rs.getString("userLogin"));
-	user.setUserPassword(rs.getString("userPassword"));
-	user.setRole(RoleEnum.valueOf(rs.getString("role").toUpperCase()));
-	user.setLocale(rs.getString("locale"));
-	user.setActive(rs.getBoolean("isActive"));
+	user.setFirstNameEng(rs.getString("f_name_eng"));
+	user.setSecondNameEng(rs.getString("s_name_eng"));
+	user.setMiddleNameEng(rs.getString("m_name_eng"));
+	user.setFirstNameUkr(rs.getString("f_name_eng"));
+	user.setSecondNameUkr(rs.getString("s_name_eng"));
+	user.setMiddleNameUkr(rs.getString("m_name_eng"));
+	user.setEmail(rs.getString("email"));
+	user.setPhone(rs.getString("phone"));
+	user.setSecondEmail(rs.getString("sec_email"));
+	user.setDepartment(rs.getInt("department"));
+	user.setPassword(rs.getString("password"));
 	return user;
     }
 
     @Override
-    public User getUserByLogin(String userLogin) throws UnsupportedEncodingException {
+    public User getUserByLogin(String email) throws UnsupportedEncodingException {
 	Connection connection = null;
 	User user = null;
 	try {
 	    connection = dbManager.getConnection();
 	    PreparedStatement prst = connection.prepareStatement(SQL_SELECT_BY_LOGIN);
-	    prst.setString(1, userLogin);
+	    prst.setString(1, email);
 	    //LOG.debug(prst);
 	    ResultSet rs = prst.executeQuery();
 	    if (rs.next()) {
@@ -105,13 +110,20 @@ public class UserDaoMysql implements UserDao {
 	    connection = dbManager.getConnection();
 	    PreparedStatement prst = connection.prepareStatement(SQL_UPDATE_USER_BY_ID);
 	    int index = 1;
-	    prst.setString(index++, user.getFirstName());
-	    prst.setString(index++, user.getSecondName());
-	    prst.setString(index++, user.getLastName());
-	    prst.setString(index++, user.getUserLogin());
-	    prst.setString(index++, user.getUserPassword());
+	    prst.setString(index++, user.getFirstNameEng());
+	    prst.setString(index++, user.getSecondNameEng());
+	    prst.setString(index++, user.getMiddleNameEng());
+	    prst.setString(index++, user.getFirstNameUkr());
+	    prst.setString(index++, user.getSecondNameUkr());
+	    prst.setString(index++, user.getMiddleNameUkr());
+	    prst.setString(index++, user.getEmail());
+	    prst.setString(index++, user.getPhone());
+	    prst.setString(index++, user.getDepartment().toString());
+	    prst.setString(index++, user.getSecondEmail());
+	    prst.setString(index++, user.getPassword());
+	   
 	    prst.setString(index++, user.getRole().toString());
-	    prst.setString(index++, user.getLocale());
+
 	    prst.setBoolean(index++, user.isActive());
 	    prst.setInt(index++, userId);
 	    LOG.debug(prst);
@@ -209,14 +221,22 @@ public class UserDaoMysql implements UserDao {
 	    PreparedStatement prst = connection.prepareStatement(SQL_REGISTRATION_OF_USER,
 		    PreparedStatement.RETURN_GENERATED_KEYS);
 	    int index = 1;
-	    prst.setString(index++, user.getFirstName());
-	    prst.setString(index++, user.getSecondName());
-	    prst.setString(index++, user.getLastName());
-	    prst.setString(index++, user.getUserLogin());
-	    prst.setString(index++, user.getUserPassword());
-	    prst.setString(index++, user.getRole().toString().toUpperCase());
-	    prst.setString(index++, user.getLocale());
-	    prst.setBoolean(index++, user.isActive());
+	    prst.setString(index++, user.getFirstNameEng());
+	    prst.setString(index++, user.getSecondNameEng());
+	    prst.setString(index++, user.getMiddleNameEng());
+	    prst.setString(index++, user.getFirstNameUkr());
+	    prst.setString(index++, user.getSecondNameUkr());
+	    prst.setString(index++, user.getMiddleNameUkr());
+	    prst.setString(index++, user.getEmail());
+	    prst.setString(index++, user.getPhone());
+	    prst.setString(index++, user.getSecondEmail());
+	    prst.setInt(index++, 1);
+	    prst.setString(index++, user.getPassword());
+	    prst.setTimestamp(index++, this.getTimestamp());
+	    prst.setTimestamp(index++, this.getTimestamp());
+	    
+	    
+	    
 	 //   LOG.debug(prst);
 	    prst.executeUpdate();
 	    ResultSet rs = prst.getGeneratedKeys();
@@ -237,14 +257,14 @@ public class UserDaoMysql implements UserDao {
 
 	// UserDaoMysql dao = new UserDaoMysql(new DBManager());
 
-	// User u = new User("Харченко", "Вячеслав", "Сергеевич", "ВС", "0000",
-	// 2, "ру", true);
+	// User u = new User("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅ", "0000",
+	// 2, "пїЅпїЅ", true);
 	// dao.createUser(u);
 
-	// System.out.println(dao.getUserByLogin("ВС"));
+	// System.out.println(dao.getUserByLogin("пїЅпїЅ"));
 
 	// System.out.println(dao.getAllUsers());
-	// System.out.println(dao.getUserByLogin("Вика"));
+	// System.out.println(dao.getUserByLogin("пїЅпїЅпїЅпїЅ"));
 	// System.out.println(dao.getAllUsers());
 
 	// System.out.println(dao.getUserByLoginAndPassword("vika", "2511"));
@@ -267,6 +287,10 @@ public class UserDaoMysql implements UserDao {
 	 * 
 	 */
 
+    }
+    
+    protected Timestamp getTimestamp(){
+	return new Timestamp(System.currentTimeMillis());
     }
 
 }

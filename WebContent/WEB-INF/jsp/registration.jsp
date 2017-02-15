@@ -17,72 +17,21 @@
 			<h3>
 				<fmt:message key="registration.h3" />
 			</h3>
-			<form action="controller?command=doRegisterUser" method="post">
-				<table>
-					<tr>
-						<td><fmt:message key="registration.user_lastname" /></td>
-						<td><input type="text" maxlength="50" name="lastName"
-							value="${lastName}" /> <c:if test="${not empty errorLastName}">
-								<br />
-								<span class="error_label">${errorLastName}</span>
-							</c:if></td>
-					</tr>
-					<tr>
-						<td><fmt:message key="registration.user_firstname" /></td>
-						<td><input type="text" maxlength="50" name="firstName"
-							value="${firstName}" /> <c:if test="${not empty errorFirstName}">
-								<br />
-								<span class="error_label">${errorFirstName}</span>
-							</c:if></td>
-					</tr>
-					<tr>
-						<td><fmt:message key="registration.user_secondname" /></td>
-						<td><input type="text" maxlength="50" name="secondName"
-							value="${secondName}" /> <c:if
-								test="${not empty errorSecondName}">
-								<br />
-								<span class="error_label">${errorSecondName}</span>
-							</c:if></td>
-					</tr>
-					<tr>
-						<td><fmt:message key="registration.user_login" /></td>
-						<td><input type="text" maxlength="50" name="userLogin"
-							value="${userLogin}" /> <c:if test="${not empty errorUserLogin}">
-								<br />
-								<span class="error_label">${errorUserLogin}</span>
-							</c:if></td>
-					</tr>
-					<tr>
-						<td><fmt:message key="registration.user_pass" /></td>
-						<td><input type="text" maxlength="10" name="userPassword"
-							value="${userPassword}" /> <c:if
-								test="${not empty errorPassword}">
-								<br />
-								<span class="error_label">${errorPassword}</span>
-							</c:if></td>
-					</tr>
-					<tr>
-						<td><fmt:message key="registration.user_confpass" /></td>
-						<td><input type="text" maxlength="10" name="passwordConfirm"
-							value="${passwordConfirm}" /> <c:if
-								test="${not empty errorPasswordConfirm}">
-								<br />
-								<span class="error_label">${errorPasswordConfirm}</span>
-							</c:if> <c:if test="${not empty  errorPasswordsNotEquel}">
-
-								<span class="error_label">${ errorPasswordsNotEquel}</span>
-							</c:if></td>
-
-					</tr>
-
-					<tr>
-						<td></td>
-						<td><input type="submit"
-							value="<fmt:message key="registration.user_confirm"/>" /></td>
-					</tr>
-				</table>
+			<form action="controller?command=doRegisterUser" method="post"><br/>
+				f_name_eng: <input type="text" name="f_name_eng"><br/>
+				s_name_eng: <input type="text" name="s_name_eng"><br/>
+				m_name_eng: <input type="text" name="m_name_eng"><br/>
+				f_name_ukr: <input type="text" name="f_name_ukr"><br/>
+				s_name_ukr: <input type="text" name="s_name_ukr"><br/>
+				m_name_ukr: <input type="text" name="m_name_ukr"><br/>
+				department: <input type="text" name="department"><br/>
+				email: <input type="text" name="email"><br/>
+				phone: <input type="text" name="phone"><br/>
+				sec_email: <input type="text" name="sec_email"><br/>
+				password: <input type="text" name="password"><br/>
+				confirm password: <input type="text" name="confirm_password"><br/>
+				<button type="submit">Ебануть эту хуйню</button>
 			</form>
-
 		</div>
 	</div>
 	<jsp:include page="parts/footer.jsp" />
