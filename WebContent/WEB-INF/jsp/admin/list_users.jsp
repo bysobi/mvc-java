@@ -31,14 +31,12 @@
 							<th><div class="c1">
 									<fmt:message key="list_users.email" />
 								</div></th>
-						
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${users}" var="user">
-							<tr title="<fmt:message key="list_users.edit"/>"
-								onclick="window.location.href='controller?command=editUser&id=${user.id}'">
-								<td><div class="c1">${user.email}</div></td>
+						<c:forEach items="${departements}" var="departement">
+							<tr>
+								<td>${departement.name}</div></td>
 							</tr>
 						</c:forEach>
 					</tbody>
