@@ -91,7 +91,7 @@ public class DoRegisterUserCommand extends AbstractCommand {
         	
         	userDao.createUser(user);
 
-		return Path.PAGE_LOGIN;
+		return Path.PAGE_REGISTRATION;
 	} catch (SQLException e) {
 	    request.setAttribute("errorMessage", "Some Error Occurred");
 	    return Path.PAGE_ERROR;
