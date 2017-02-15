@@ -20,12 +20,9 @@ input,select {
 }
 
 #header {
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-	height: 25px;
-	background-color: #ac7ca1;
+	background-color: #337ab7;
+	font-size: 18px;
+	padding: 10px 0;
 }
 
 #header table {
@@ -51,16 +48,25 @@ input,select {
 	text-align: right;
 }
 
+#header .right a {
+	margin: 0 15px;
+    padding: 9px;
+    background: #fff;
+    display: inline-block;
+    border-radius: 5px;
+    min-width: 125px;
+}
+
 #footer {
-	position: fixed;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: 25px;
-	background-color: #ac7ca1;
+	background-color: #337ab7;
 	color: #ffffff;
 	font-weight: bold;
 	text-align: center;
+	min-height: 50px;
+}
+
+.copyright {
+	margin-top: 15px;
 }
 
 #wraper {
@@ -279,6 +285,10 @@ input,select {
 
 #select_bus_id {
 	width:400px;
+}
+
+.error {
+	color: #bf2a2a;
 }
 
 

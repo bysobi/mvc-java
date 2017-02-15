@@ -25,15 +25,12 @@
 </head>
 <body>
 	<jsp:include page="parts/header.jsp" />
-	<div id="wraper">
-		<div id="content">
-			<h3>
-				<fmt:message key="registration.h3" />
-			</h3>
-		</div>
 <div class="container" style="margin-top:50px">
 		<div class="row">
 		    <div class="col-md-12">
+		    	<h3>
+					<fmt:message key="registration.h3" />
+				</h3>
 			    <form id="signup" action="controller?command=doRegisterUser" method="post">
 
 					<div class="row">
@@ -83,79 +80,71 @@
 					</div>
 
 					<div class="row">
-						<div class="form-group required">
-							<label for="input-category">EMail</label>
-							<select name="email" class="form-control" id="input-email" >
-							</select>
-							<div class="input-group custom-email" style="display:none">
-								<span class="input-group-addon">@</span>
-								<input type="text" name="custom_email" class="form-control" id="input-custom-email" placeholder="Custom email">
+						<div class="col-md-6">
+							<div class="form-group required">
+								<label for="input-category">EMail</label>
+								<select name="email" class="form-control" id="input-email" >
+								</select>
+								<div class="input-group custom-email" style="display:none">
+									<span class="input-group-addon">@</span>
+									<input type="text" name="custom_email" class="form-control" id="input-custom-email" placeholder="Custom email">
+								</div>
 							</div>
-							
 						</div>
-					</div>
 
-					<div class="row">
-						<div class="form-group">
-							<label for="input-category">Phone</label>
-							<div class="input-group">
-								<span class="input-group-addon">+380</span>
-								<input type="text" name="phone" class="form-control" id="input-phone" placeholder="phone">
-							</div>
-							
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="form-group">
-							<label for="input-category">Secondary email</label>
+						<div class="col-md-6">
 							<div class="form-group">
-							  <div class="input-group">
-							    <input type="text" name="secondary_email" class="form-control" id="input-secondary-email" placeholder="Secondary email">
-							    <div class="input-group-btn">
-							      <select class="form-control" id="domain-email" name="domain_email">
-							        <option value="gmail">@gmail.com</option>
-							        <option value="mail.ru">@mail.ru</option>
-							        <option value="yandex.ua">@yandex.ua</option>
-							      </select>
-							    </div>
-							  </div>
+								<label for="input-category">Secondary email</label>
+								<div class="form-group">
+								  <div class="input-group">
+								    <input type="text" name="secondary_email" class="form-control" id="input-secondary-email" placeholder="Secondary email">
+								    <div class="input-group-btn">
+								      <select class="form-control" id="domain-email" name="domain_email">
+								        <option value="gmail">@gmail.com</option>
+								        <option value="mail.ru">@mail.ru</option>
+								        <option value="yandex.ua">@yandex.ua</option>
+								      </select>
+								    </div>
+								  </div>
+								</div>
 							</div>
 						</div>
 					</div>
+
 					<div class="row">
-						<div class="form-group">
-							<label for="input-category">Department</label>
-							<input type="text" name="department" class="form-control" id="input-department" placeholder="department">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="input-category">Phone</label>
+								<div class="input-group">
+									<span class="input-group-addon">+380</span>
+									<input type="text" name="phone" class="form-control" id="input-phone" placeholder="phone">
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="input-category">Department</label>
+								<input type="text" name="department" class="form-control" id="input-department" placeholder="department">
+							</div>
 						</div>
 					</div>
+
 					<div class="row">
-						<div class="form-group">
-							<label for="input-category">Password</label>
-							<input type="text" name="password" class="form-control" id="input-password" placeholder="password">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="input-category">Status</label>
+								<input type="checkbox"  value="1" name="status" class="js-switch" id="input_status" class="form-control" />
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<button class="btn btn-primary pull-right">Sign up</button>
 						</div>
 					</div>
-					<div class="row">
-						<div class="form-group">
-							<label for="input-category">Confirm password</label>
-							<input type="text" name="confirm_password" class="form-control" id="input-confirm-password" placeholder="Confirm password">
-						</div>
-					</div>
-					<div class="row">
-						<div class="form-group">
-							<label for="input-category">Status</label>
-							<input type="checkbox"  value="1" name="status" class="js-switch" id="input_status" class="form-control" />
-						</div>
-					</div>
-					<button class="btn btn-primary">Sign up</button>
 			  	</form>
 			</div>
 		</div>
-	</div>
-
-
-
-
 	</div>
 	<jsp:include page="parts/footer.jsp" />
 <script>
@@ -256,16 +245,16 @@ $(document).ready(function () {
 	      },
 	    },
 	    messages: {
-	      f_name_ukr: "Введите имя",
+	      f_name_ukr: "Введите Имя",
 	      s_name_ukr: "Введите Фамилию",
-	      m_name_ukr: "Введи Отчество сука",
-	      f_name_eng: "ВВЕДИТ!!!!!!!!!!!!!!!",
-	      s_name_eng: "ВВЕДИТ!!!!!!!!!!!!n",
-	      m_name_eng: "ВВЕДИТ!!!",
-	      email: "МЫЛО СУКА ОБЯЗАТЕЛЬНОЕ",
+	      m_name_ukr: "Введите Отчество",
+	      f_name_eng: "Поле не может быть пустым",
+	      s_name_eng: "Поле не может быть пустым",
+	      m_name_eng: "Поле не может быть пустым",
+	      email: "Введите e-mail",
 	      phone: {
-	        minlength: "ХУЙ, 9 цифр и не ебет!",
-	        maxlength: "ХУЙ ТЕБЕ!",
+	        minlength: "Номер телефона должен состоять из 9 цифр",
+	        maxlength: "Номер телефона должен состоять из 9 цифр",
 	      }
 	    },
 
