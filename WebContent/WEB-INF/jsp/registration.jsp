@@ -100,9 +100,9 @@
 								    <input type="text" name="secondary_email" class="form-control" id="input-secondary-email" placeholder="Secondary email">
 								    <div class="input-group-btn">
 								      <select class="form-control" id="domain-email" name="domain_email">
-								        <option value="gmail">@gmail.com</option>
-								        <option value="mail.ru">@mail.ru</option>
-								        <option value="yandex.ua">@yandex.ua</option>
+								        <option value="@gmail">@gmail.com</option>
+								        <option value="@mail.ru">@mail.ru</option>
+								        <option value="@yandex.ua">@yandex.ua</option>
 								      </select>
 								    </div>
 								  </div>
@@ -205,7 +205,7 @@ $(document).ready(function () {
 		$('option', select).remove();
 
 		$.each(newOptions, function(val, text) {
-		    options[options.length] = new Option(text, val);
+		    options[options.length] = new Option(text, text);
 		});
 
 		options[options.length] = new Option('custom', 'custom');
